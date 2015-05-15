@@ -8,7 +8,7 @@ RUN apt-get update -y -q && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
-ADD https://d2rqpywgspga97.cloudfront.net/mstatic/1431450639/includes/certificates/logentries.all.crt /etc/logentries.all.crt
+ADD ./logentries.all.crt /etc/logentries.all.crt
 ADD ./rsyslog.conf /etc/rsyslog.conf
 ADD ./run.sh /run.sh
 
